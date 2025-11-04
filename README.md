@@ -24,30 +24,40 @@ Option	Description
 ```
 
 ## VLAN File Examples
-Sample file format for static IPs (e.g., 1, 20, 24, 500 are VLAN IDs. The last octet defines the static IP — e.g., 10.0.0.7/24 assigns 10.0.0.7 as the static IP. The gateway is inferred automatically.)
 
-Each line contains a VLAN ID followed by a static IP in CIDR notation. The last octet of the IP address is what gets assigned to the VLAN interface.
+### Static IPs
 
-For example, in the file below: 10 192.168.10.7/24 → VLAN 10 will have the IP 192.168.10.7, and the gateway is determined automatically.
+Each line in the file defines a VLAN ID and a static IP in CIDR format.
 
-## Static:
-### file.txt
+Example File.txt:
 ```
 10 192.168.10.7/24
 20 10.0.20.15/24
 ```
+This creates:
 
-## DHCP:
+VLAN 10 → IP: 192.168.10.7
 
-For DHCP, each line contains a VLAN ID and a subnet mask. The interface will use DHCP to obtain an IP within that subnet. 
+VLAN 20 → IP: 10.0.20.15
 
-In the example below: 30 /24 creates VLAN 30, and assigns it an IP via DHCP from the associated /24 network.
+💡 The gateway will be set automatically based on the subnet.
 
-### file.txt
+### DHCP:
+
+Each line defines a VLAN ID and a subnet mask. The interface will use DHCP to obtain an IP within that subnet.
+
+Example File.txt:
 ```
 30 /24
 40 /22
 ```
+This creates:
+
+VLAN 30 → DHCP IP in a /24 network
+
+VLAN 40 → DHCP IP in a /22 network
+
+
 # Quick Start
 
 ```
