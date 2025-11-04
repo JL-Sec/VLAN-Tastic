@@ -28,14 +28,17 @@ Sample file format for static IPs (e.g., 1, 20, 24, 500 are VLAN IDs. The last o
 
 ## Static:
 ### file.txt
+```
 10 192.168.10.7/24
 20 10.0.20.15/24
+```
 
 ## DHCP:
 ### file.txt
+```
 30 /24
 40 /22
-
+```
 # Quick Start
 
 ```
