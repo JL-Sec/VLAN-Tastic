@@ -1,4 +1,4 @@
-# VLANtastic 
+# VLAN-Tastic 
 
 VLANtastic is a lightweight bash script that lets you create, check, and delete multiple VLAN interfaces in seconds — designed for when you're on a trunk port and need quick VLAN setup (static or DHCP).
 
