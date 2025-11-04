@@ -57,6 +57,7 @@ VLAN 30 → DHCP IP in a /24 network
 
 VLAN 40 → DHCP IP in a /22 network
 
+💡 The gateway will be set automatically based on the subnet.
 
 # Quick Start
 
